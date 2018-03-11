@@ -1,0 +1,109 @@
+.scroll-pane {
+    -fx-background-color: #3e9aff;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #3e9aff;
+}
+
+.scroll-bar {
+    -fx-background-color: #2d89ef;
+}
+
+.scroll-bar > .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar > .thumb {
+    -fx-background-color: #4fabff;
+}
+
+.scroll-bar:hover {
+    -fx-cursor: hand;
+}
+
+.scroll-bar > .thumb:hover {
+    -fx-background-color: #5fbcff;
+}
+
+.scroll-bar > .increment-button, .decrement-button {
+    -fx-background-color: #4fabff;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar > .increment-button:hover, .decrement-button:hover {
+    -fx-background-color: #5fbcff;
+}
+
+.scroll-bar > .increment-button > .increment-arrow, .decrement-button > .decrement-arrow {
+    -fx-background-color: #2d89ef;
+}
+
+.corner {
+    -fx-background-color: #2d89ef;
+}
+
+.text-field {
+    -fx-background-color: #2d89ef;
+    -fx-text-fill: #ffffff;
+    -fx-font: 14 lato;
+}
+
+.text-field:focused {
+    -fx-background-color: #4fabff;
+}
+
+.text-field:hover {
+    -fx-cursor: hand;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font: 14 roboto;
+}
+
+.button {
+    -fx-background-color: #4fabff;
+    -fx-text-fill: #ffffff;
+    -fx-font: 14 roboto;
+}
+
+.button:hover {
+    -fx-background-color: #5fbcff;
+    -fx-cursor: hand;
+}
+
+.list-view {
+    -fx-background-color: #3e9aff;
+    -fx-control-inner-background: #3e9aff;
+    -fx-background-insets: 0;
+}
+
+.list-cell {
+    -fx-text-fill: #ffffff;
+    -fx-font: 14 roboto;
+}
+
+.list-cell:selected {
+    -fx-background-color: #5fbcff;
+    -fx-text-fill: #000000;
+}
+
+.list-cell:hover {
+    -fx-background-color: #5fbcff;
+    -fx-cursor: hand;
+}
+
+.list-cell:even {
+    -fx-background-color: #3e9aff;
+}
+
+.list-cell:odd {
+    -fx-background-color: #4fabff;
+}
+
+.separator .line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #2d89ef;
+}

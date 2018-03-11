@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TemplateController">
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="-Infinity" />
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="-Infinity" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="110.0" valignment="CENTER" vgrow="NEVER" />
+        <RowConstraints minHeight="-Infinity" prefHeight="290.0" valignment="TOP" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <VBox alignment="TOP_CENTER" style="-fx-background-color: #3e9aff;">
+            <children>
+                <GridPane alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="210.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="36.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#getCitiesListLeft" text="OK" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#printDataLeftSide" text="OK" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label text="Kraj:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                        <Label text="Miasto:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                        <TextField fx:id="countryLeft" onAction="#getCitiesListLeft" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></TextField>
+                        <TextField fx:id="cityLeft" onAction="#printDataLeftSide" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Skąd wyruszasz?" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                    </children>
+                </GridPane>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </Separator>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" style="-fx-background-color: #3e9aff;;" GridPane.columnIndex="1">
+            <children>
+                <GridPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="210.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="36.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#getCitiesListRight" text="OK" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#printDataRightSide" text="OK" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label text="Kraj:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                        <Label text="Miasto:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                        <TextField fx:id="countryRight" onAction="#getCitiesListRight" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="cityRight" onAction="#printDataRightSide" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Dokąd zmierzasz?" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                    </children>
+                </GridPane>
+            <Separator prefWidth="200.0">
+               <padding>
+                  <Insets top="6.0" />
+               </padding>
+            </Separator>
+            </children>
+        </VBox>
+        <ScrollPane fitToHeight="true" fitToWidth="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <content>
+                <GridPane alignment="CENTER" stylesheets="@Style.css">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <Label fx:id="cityNameLeft">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Label>
+                                <Label fx:id="currentDateLeft">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                                <HBox alignment="CENTER" prefHeight="100.0" spacing="70.0">
+                                    <children>
+                                        <Label fx:id="currentTimeLeft">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                                        <ImageView fx:id="currentIconLeft" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                                        <Label fx:id="currentTempLeft">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                                    </children>
+                                </HBox>
+                                <Label fx:id="currentHumidityLeft">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                                <HBox fx:id="currentDayNextHoursLeft" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" spacing="6.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin></HBox>
+                            </children>
+                        </VBox>
+                  <GridPane fx:id="containerLeft" alignment="CENTER" vgap="25.0" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="335.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" top="-45.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+        <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <content>
+                <GridPane alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <Label fx:id="cityNameRight">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Label>
+                                <Label fx:id="currentDateRight" />
+                                <HBox alignment="CENTER" prefHeight="100.0" spacing="70.0">
+                                    <children>
+                                        <Label fx:id="currentTimeRight" />
+                                        <ImageView fx:id="currentIconRight" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                                        <Label fx:id="currentTempRight" />
+                                    </children>
+                                </HBox>
+                                <Label fx:id="currentHumidityRight" />
+                                <HBox fx:id="currentDayNextHoursRight" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="335.0">
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <GridPane fx:id="containerRight" alignment="CENTER" vgap="25.0" GridPane.rowIndex="1">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="335.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <GridPane.margin>
+                                <Insets bottom="20.0" top="-45.0" />
+                            </GridPane.margin>
+                        </GridPane>
+                    </children>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </children>
+</GridPane>
