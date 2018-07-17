@@ -1,3 +1,5 @@
+package main.model;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import main.format.WeatherDateSegregation;
 
 import java.io.IOException;
 import java.net.URL;

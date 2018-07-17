@@ -1,3 +1,7 @@
+package main.format;
+
+import main.api.OWMJapisRequest;
+
 public class WeatherDateSegregation {
 
     public static boolean isTheSameDay(char currentDate, char hourlyDate) {

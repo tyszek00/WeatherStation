@@ -1,3 +1,5 @@
+package main.base;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,11 +12,11 @@ public class WeatherStation extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(WeatherStation.class.getResource("Template-new.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(WeatherStation.class.getResource("/main/view/Template-new.fxml"));
         Parent layout = fxmlLoader.load();
 
         Scene scene = new Scene(layout);
-        scene.getStylesheets().add("Style.css");
+        scene.getStylesheets().add("main/base/Style.css");
 
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.getStyleClass().add("scroll-pane");

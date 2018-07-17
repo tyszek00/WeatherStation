@@ -1,3 +1,6 @@
+package main.model;
+
+import main.api.OWMJapisRequest;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import impl.org.controlsfx.autocompletion.AutoCompletionTextFieldBinding;
@@ -10,6 +13,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import main.files.ListCities;
+import main.format.DateFormat;
+import main.format.WeatherDateSegregation;
+import main.model.City;
 import net.aksingh.owmjapis.api.APIException;
 import org.controlsfx.control.textfield.TextFields;
 
@@ -136,7 +143,7 @@ public class ControllerFunctions {
     }
 
     public void fillWindowWithData(TextField country, TextField city, Label cityName, Label currentDate, Label currentTime, Label currentTemp,
-                                    Label currentHumidity, ImageView currentIcon, HBox currentDayNextHours, GridPane container) {
+                                   Label currentHumidity, ImageView currentIcon, HBox currentDayNextHours, GridPane container) {
 
         String desiredCity = city.getText();
         String desiredCountry = getCountryCode(country);

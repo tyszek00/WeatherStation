@@ -1,3 +1,5 @@
+package main.api;
+
 import net.aksingh.owmjapis.api.APIException;
 import net.aksingh.owmjapis.core.OWM;
 import net.aksingh.owmjapis.model.CurrentWeather;
@@ -10,7 +12,7 @@ import java.util.List;
 
 public class OWMJapisRequest {
 
-    private OWM openWeatherRequest = new OWM("YOUR_API_KEY");
+    private OWM openWeatherRequest = new OWM("14de59c7740e93f8e7cd1b4f9934145c");
     private CurrentWeather currentWeather;
     private HourlyWeatherForecast hourlyWeatherForecast;
 

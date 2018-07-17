@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TemplateController">
+<GridPane alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.model.TemplateController">
     <columnConstraints>
         <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="-Infinity" />
         <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="-Infinity" />
@@ -107,7 +107,7 @@
         </VBox>
         <ScrollPane fitToHeight="true" fitToWidth="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
             <content>
-                <GridPane alignment="CENTER" stylesheets="@Style.css">
+                <GridPane alignment="CENTER" stylesheets="@../base/Style.css">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
                     </columnConstraints>

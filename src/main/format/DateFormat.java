@@ -1,3 +1,5 @@
+package main.format;
+
 public class DateFormat {
 
     public static String getDay(String day) {
