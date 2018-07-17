@@ -1,2 +1,3 @@
-\cache\*
-\out\*
+/cache/*
+/out/*
+/.idea/*
