@@ -12,7 +12,7 @@ import java.util.List;
 
 public class OWMJapisRequest {
 
-    private OWM openWeatherRequest = new OWM("14de59c7740e93f8e7cd1b4f9934145c");
+    private OWM openWeatherRequest = new OWM(new APIkey().getKey());
     private CurrentWeather currentWeather;
     private HourlyWeatherForecast hourlyWeatherForecast;
 
